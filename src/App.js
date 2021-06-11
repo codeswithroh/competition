@@ -5,6 +5,9 @@ function App() {
   const [color, setColor] = useState(false);
   const [color1, setColor1] = useState(false);
   const [hover, setHover] = useState(false);
+  const [hover1, setHover1] = useState(false);
+  const [hover2, setHover2] = useState(false);
+  const [hover3, setHover3] = useState(false);
 
   const handleNext= (e) => {
     e.preventDefault();
@@ -90,20 +93,20 @@ function App() {
       {/* slideshow */}
       {slider ? (
         <div className='slideshow'>
-          <div className='slide slide3' onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
-          {hover?<h2 style={{position:'absolute',bottom:'0',color:'white',backgroundColor:'rgba(160, 32, 27, 0.521)',padding:'0.5em 2em',borderRadius:'10px'}}>Flawless</h2>:null}
+          <div className='slide slide3' onMouseEnter={()=>setHover2(true)} onMouseLeave={()=>setHover2(false)}>
+          {hover2?<h2 style={{position:'absolute',bottom:'0',color:'white',backgroundColor:'rgba(129, 127, 127, 0.6)',padding:'0.5em 2em',borderRadius:'10px'}}>Flawless</h2>:null}
           </div>
-          <div className='slide slide4' onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
-          {hover?<h2 style={{position:'absolute',bottom:'0',color:'white',backgroundColor:'rgba(160, 32, 27, 0.521)',padding:'0.5em 2em',borderRadius:'10px'}}>CryptoQuest</h2>:null}
+          <div className='slide slide4' onMouseEnter={()=>setHover3(true)} onMouseLeave={()=>setHover3(false)}>
+          {hover3?<h2 style={{position:'absolute',bottom:'0',color:'white',backgroundColor:'rgba(129, 127, 127, 0.6)',padding:'0.5em 2em',borderRadius:'10px'}}>CryptoQuest</h2>:null}
           </div>
         </div>
       ) : (
         <div className='slideshow'>
           <div className='slide slide1' onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
-            {hover?<h2 style={{position:'absolute',bottom:'0',color:'white',backgroundColor:'rgba(160, 32, 27, 0.521)',padding:'0.5em 2em',borderRadius:'10px'}}>Web Development</h2>:null}
+            {hover?<h2 style={{position:'absolute',bottom:'0',color:'white',backgroundColor:'rgba(129, 127, 127, 0.6)',padding:'0.5em 2em',borderRadius:'10px'}}>Web Development</h2>:null}
           </div>
-          <div className='slide slide2' onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)}>
-          {hover?<h2 style={{position:'absolute',bottom:'0',color:'white',backgroundColor:'rgba(160, 32, 27, 0.521)',padding:'0.5em 2em',borderRadius:'10px'}}>Bug Hunt</h2>:null}
+          <div className='slide slide2' onMouseEnter={()=>setHover1(true)} onMouseLeave={()=>setHover1(false)}>
+          {hover1?<h2 style={{position:'absolute',bottom:'0',color:'white',backgroundColor:'rgba(129, 127, 127, 0.6)',padding:'0.5em 2em',borderRadius:'10px'}}>Bug Hunt</h2>:null}
           </div>
         </div>
       )}
