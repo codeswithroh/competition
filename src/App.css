@@ -1,38 +1,164 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(to right bottom, black,rgb(110, 21, 21));
+}
+
+nav {
+  position: absolute;
+  top:0;
+  left:1.5em;
+  right:1.5em;
+  background-color: rgba(0, 0, 0, 0.534);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5em 0;
+}
+
+.nav :hover{
+  box-shadow: 10px 10px 5px rgba(255, 0, 0, 0.486);
+  font-style: italic;
+}
+
+.intra:hover,
+.cu-brain:hover {
+  background:gray;
+}
+
+.logo :hover {
+  transform: scale(1.1);
+}
+
+.logo {
+  width:3em;
+  height: 3em;
+  background-image: url('./assets/images/gx.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+
+.intra p,
+.cu-brain p {
+  font-size: 1.8rem;
+}
+
+.geekonix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:0.5em;
+  font-size: 1.5rem;
+  position: absolute;
+  top:4em;
+  margin: auto;
+  right: 0;
+  left: 0;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(196, 192, 192);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body_description h2 {
+  font-weight: 100;
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.body_description p {
+  max-width: 24em;
+  text-align: left;
+  margin-top: 1.5em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.divider {
+  width:0.1em;
+  height:14em;
+  background: linear-gradient(to bottom, black, red, black);
+  margin:0 2em;
+}
+
+.slideshow {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap:4em;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  position: absolute;
+  bottom:4em;
+  left:0;
+  right: 0;
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.slide {
+  width:16em;
+  height:8em;
+  background:black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  transition: 0.5s;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slide1 {
+  background-image: url('./assets/images/webd.png');
 }
+.slide2 {
+  background-image: url('./assets/images/bughunt.jpg');
+}
+.slide3 {
+  background-image: url('./assets/images/crypto.jpg');
+}
+.slide4 {
+  background-image: url('./assets/images/flawless.jpg');
+}
+
+.slideshow-button {
+  position: absolute;
+  bottom:2em;
+  left:0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:2em;
+  cursor: pointer;
+}
+
+.next,
+.prev {
+  width:3em;
+  height:0.2em;
+  background: rgba(255, 255, 255, 0.534);
+}
+
+.next_clicked {
+  width:3em;
+  height:0.2em;
+  background: red;
+}
+.prev_clicked {
+  width:3em;
+  height:0.2em;
+  background: red;
+}
+
+.slide:hover {
+  transform: scale(1.1);
+}
+
